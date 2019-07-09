@@ -23,24 +23,24 @@ module.exports = (data) => {
       errors.genre = 'Genre must be between 3 and 10 characters'
     }
 
-    if(isNaN(data.rating) || data.rating === ''){
-      errors.rating = 'Rating must be a number'
+    if(isNaN(data.rating) || data.rating === '' || !(data.rating % 1 === 0)){
+      errors.rating = 'Rating must be a number and without decimals'
     }
 
-    if(isNaN(data.Year) || data.Year === ''){
-      errors.Year = 'Year must be a number'
+    if(isNaN(data.Year) || data.Year === '' || !(data.Year % 1 === 0)){
+      errors.Year = 'Year must be a number and without decimals'
     }
 
-    if(!Validator.isLength(data.Desc, {min:10, max: 200})){
-      errors.Desc = 'Description must be between 10 and 200 characters'
+    if(!Validator.isLength(data.Desc, {min:10, max: 500})){
+      errors.Desc = 'Description must be between 10 and 500 characters'
     }
 
     if(!Validator.isLength(data.Language, {min:3, max: 20})){
       errors.Language = 'Language must be between 3 and 20 characters'
     }
 
-    if(isNaN(data.Time) || data.Time === ''){
-      errors.Time = 'Time must be a number'
+    if(isNaN(data.Time) || data.Time === ''|| !(data.Time % 1 === 0)){
+      errors.Time = 'Time must be a number and without decimals'
     }
 
     if(!isImageUrl(data.PictureLink)){

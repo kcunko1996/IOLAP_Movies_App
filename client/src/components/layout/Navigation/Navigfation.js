@@ -6,7 +6,7 @@ const Navigation = () => {
   return( <nav className="navbar navbar-expand-md navbar-dark bg-dark  mb-3 py-3 fixed-top">
   <div className="container">
     
-    <h1 className="h2 navbar-brand text-light  " to="" >DBT Movies</h1>
+    <Link to='/'><h1 className="h2 navbar-brand text-light  " to="" >DBP Movies</h1> </Link>
   
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
       <span className="navbar-toggler-icon"></span>

@@ -1,8 +1,8 @@
 import axios from 'axios'
-import {GET_ALL_MOVIES,GET_ONE_MOVIE,FETCH_DATA} from './types'
+import {GET_ALL_MOVIES,GET_ONE_MOVIE} from './types'
 import {GET_ERROR} from './types'
 
-export const getAllMovies = () => dispatch => {
+export const GetAllMovies = () => dispatch => {
       
        axios
       .get('/api/v1/movies')
@@ -64,11 +64,14 @@ export const UpdateMovie = (id,data,history) => dispatch => {
       )
   }
 
-export const AddMovieAction = (data) => dispatch => {
+export const AddMovieAction = (data,history) => dispatch => {
 
       axios
       .post('/api/v1/movies',data)
-      .then(() => window.location.reload())
+      .then(() => {
+        window.location.reload()
+        
+    })
       .catch(err =>
         dispatch({
           type: GET_ERROR,

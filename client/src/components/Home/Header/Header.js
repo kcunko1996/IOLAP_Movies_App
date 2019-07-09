@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Header_SLide from '../Header/Header_Slide/Header_Slide'
+import HeaderSLide from '../Header/Header_Slide/Header_Slide'
 import Loading from '../../common/Loading'
 
 export default function Header({movies}) {
@@ -15,13 +15,15 @@ const isArray = Array.isArray(movies);
     } else{
 
       let ArraySlide = movies.slice(0,4).map(movie => {
-        return <Header_SLide 
+        return <HeaderSLide 
         key={movie.id} 
         id={movie.id} 
         name={movie.name} 
         rating={movie.rating}
         genre={movie.genre} 
-        PictureLink={movie.PictureLink} />
+        PictureLink={movie.PictureLink}
+        Year={movie.Year}
+         />
         })
 
       return (

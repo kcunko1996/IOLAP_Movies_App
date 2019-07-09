@@ -2,6 +2,19 @@
 exports.seed = function(knex) {
   return knex('movies').del()
   .then(() => {
+      return knex('movies').insert({
+      name: ' Star Trek ',
+      genre: '  Action, Adventure, Sci-Fi',
+      rating: 8,
+      Year: 2009,
+      Time: 130,
+      Desc : 'The brash James T. Kirk tries to live up to his fathers legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.',
+      Language: 'English',
+      PictureLink: 'https://www.space.ca/wp-content/uploads/2018/04/header1.jpg', 
+      BackgroundLink: 'https://www.syfy.com/sites/syfy/files/wire/legacy/startrek_top.jpg'
+      });
+      })
+      .then(() =>{
   return knex('movies').insert({
   name: ' Pain & Gain',
   genre: 'Crime/Drama ',
@@ -23,48 +36,22 @@ exports.seed = function(knex) {
     Time: 130,
     Desc : 'When Sids attempt to adopt three dinosaur eggs gets him abducted by their real mother to an underground lost world, his friends attempt to rescue him.',
     Language: 'English',
-    PictureLink: 'https://images.wallpaperscraft.com/image/star_wars_the_force_awakens_main_characters_105940_1280x720.jpg', 
-    BackgroundLink: 'https://images.wallpaperscraft.com/image/manfred_manny_ice_age_mammoths_63318_1280x720.jpg'
+    PictureLink: 'https://www.animationsource.org/sites_content/age_de_glace/img_screenshot/153560.jpg', 
+    BackgroundLink: 'https://d1jo0zet24jmxt.cloudfront.net/content/12398/83b1f73180246950f8f37248959da5a9.jpg'
+    
     });
     })
     .then(() => {
       return knex('movies').insert({
-      name: ' Spider-Man: Far from Home ',
-      genre: ' Action, Adventure, Sci-Fi ',
+      name: ' Star Wars: The Force Awakens ',
+      genre: '  Fantasy/Sci-fi ',
       rating: 8,
-      Year: 2019,
+      Year: 2015,
       Time: 130,
-      Desc : 'When Sids attempt to adopt three dinosaur eggs gets him abducted by their real mother to an underground lost world, his friends attempt to rescue him.',
+      Desc : 'Three decades after the Empires defeat, a new threat arises in the militant First Order. Defected stormtrooper Finn and the scavenger Rey are caught up in the Resistances search for the missing Luke Skywalker.',
       Language: 'English',
-      PictureLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg', 
-      BackgroundLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg'
+      PictureLink: 'https://cdn-images-1.medium.com/max/2400/1*S7LfTcdi4uLWmbuueEIycQ.jpeg', 
+      BackgroundLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1920x1080.jpg'
       });
-      })
-      .then(() => {
-        return knex('movies').insert({
-        name: ' Spider-M  from Home ',
-        genre: ' Action, Adventure, Sci-Fi ',
-        rating: 8,
-        Year: 2019,
-        Time: 130,
-        Desc : 'When Sids attempt to adopt three dinosaur eggs gets him abducted by their real mother to an underground lost world, his friends attempt to rescue him.',
-        Language: 'English',
-        PictureLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg', 
-        BackgroundLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg'
-        });
-        })
-        .then(() => {
-          return knex('movies').insert({
-          name: ' Man: Far from Home ',
-          genre: ' Action, Adventure, Sci-Fi ',
-          rating: 8,
-          Year: 2019,
-          Time: 130,
-          Desc : 'When Sids attempt to adopt three dinosaur eggs gets him abducted by their real mother to an underground lost world, his friends attempt to rescue him.',
-          Language: 'English',
-          PictureLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg', 
-          BackgroundLink: 'https://images.wallpaperscraft.com/image/darth_vader_armor_star_wars_film_hat_snow_93645_1280x720.jpg'
-          });
-          })
-          
+      })   
 };

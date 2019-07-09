@@ -23,14 +23,14 @@ import AddMovie from '../../Home/AddMovie/AddMovie'
     if(Array.isArray(movies)){
 
       if(movies.length === 1) {
-       const {id,name,genre,rating,Year,BackgroundLink,Desc,Language,PictureLink} = movies[0]
-          console.log(id)
+       const {id,name,genre,rating,Year,BackgroundLink,Desc,Language,PictureLink,Time} = movies[0]
+      
         dashboard = (<div className="">
 
                        <BackGroundImage BackgroundLink={BackgroundLink}/>
-                       <CardDescription id={id} name={name} genre={genre} rating={rating} Year={Year} Desc={Desc} Language={Language} PictureLink={PictureLink}/>
+                       <CardDescription id={id} name={name} genre={genre} rating={rating} Year={Year} Desc={Desc} Language={Language} Time={Time} PictureLink={PictureLink}/>
                        <DeleteModal id={id}/>
-                       <Update id={id}/>
+                       <Update id={id} name={name} genre={genre} rating={rating} Year={Year} Desc={Desc} Language={Language} PictureLink={PictureLink} BackgroundLink={BackgroundLink}/>
                        <AddMovie/>
                     </div> )
     } else {

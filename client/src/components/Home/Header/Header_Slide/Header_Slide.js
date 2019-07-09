@@ -4,7 +4,7 @@ import './Header_slide.css'
 import {getOneMovie} from '../../../../actions/moviesActions'
 import {connect} from 'react-redux'
 
- function Header_Slide({id,name, rating,genre,PictureLink}) {
+ function HeaderSlide({id,name,Year, rating,genre,PictureLink}) {
   
   return (
     
@@ -15,7 +15,7 @@ import {connect} from 'react-redux'
         <div className="col-sm-4 "> 
         <Link to={`/api/v1/movies/${id}` } params={id} onClick={() =>getOneMovie(id)} style={{ textDecoration: 'none' }}>
         <h1 className="py-3 h3 text-capitalize text-white font-weight-bold">{name}</h1>
-        <p className="lead text-white text-capitalize ">2017 | {genre} | 18+| imdb {rating} </p>
+        <p className="lead text-white text-capitalize ">{Year} | {genre} | Rating {rating} </p>
         </Link>
      
        </div>
@@ -29,4 +29,4 @@ import {connect} from 'react-redux'
   )
 }
 
-export default connect(null,{getOneMovie})(Header_Slide)
+export default connect(null,{getOneMovie})(HeaderSlide)

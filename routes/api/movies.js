@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../../database_connection/database_connection')
-const isValidated = require('../../validation/UpdateValidation')
+const isValidated = require('../../validation/Validation')
 
 // @route   GET request /api/v1/movies
 //@desc     Retrieving all the data from table movies
@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
   db.select('*')
   .from('movies')
   .then(data => res.json(data))
-  .catch(err => res.json(err))
+  .catch(err => res.status(404).json(err))
 })
 
 // @route   GET request /api/v1/movies/:id
@@ -23,7 +23,7 @@ router.get('/:id', (req,res) => {
   .where('id','=', id)
   .then(data =>{
     if (data === undefined || data.length == 0) {
-      res.status(404).json( `There is no such movie entrie  `)
+      res.status(400).json( `There is no such movie entrie  `)
   } else {
   res.json(data)
   }
@@ -58,7 +58,7 @@ router.post('/', (req,res) => {
     .into('movies')
     .returning('*')
     .then(data => res.json(data))
-    .catch(() => res.json({msg: 'Movie entrie was unsuccessful'}))
+    .catch(() => res.status(404).json({msg: 'Movie entrie was unsuccessful'}))
 })
 
 // @route   PUT request /api/v1/movies/:id
@@ -90,7 +90,7 @@ router.put('/:id', (req,res) => {
   .returning('*')
   .then(data => {
     if( data === undefined || data.length == 0){
-      res.json({msg: `There is no such movie entrie  with an ${id}`})
+      res.status(400).json({msg: `There is no such movie entrie  with an ${id}`})
     } else {
       res.json(data)
     }
@@ -104,6 +104,14 @@ router.put('/:id', (req,res) => {
 router.delete('/:id', (req,res) => {
   const id = req.params.id
 
-  db('movies').where({id}).del().then(() => res.json({msg: 'Movie entrie was successfully deleted'})).catch(() => res.json({msg: 'Deleting is not possible at the moment'}))
+  db('movies').
+  where({id})
+  .del().
+  then(() => res.json({
+  msg: 'Movie entrie was successfully deleted'
+  }))
+  .catch(() => res.json(
+  {msg: 'Deleting is not possible at the moment'}
+   ))
 })
 module.exports = router

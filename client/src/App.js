@@ -7,7 +7,7 @@ import MoviePage from './components/MovieDescriptionPage/MoviePage/MoviePage'
 import BodyBackgroundColor from 'react-body-backgroundcolor'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 import {Provider} from 'react-redux'
-
+import LandingPage from './components/LandingPage/LandingPage'
 import store from './store'
 function App() {
  
@@ -16,12 +16,15 @@ function App() {
     <Provider store={store}>
     <div className="App ">
      <Router>
+
     <Navigation />
        <Switch>
+    <Route exact path='/' component= { LandingPage } />
     <Route exact path='/api/v1/movies' component= { Home } />
     <Route exact path='/api/v1/movies/:id' component= {MoviePage} />
     <Route component={PageNotFound} />
     </Switch>
+    
     </Router>
     </div>
     </Provider>

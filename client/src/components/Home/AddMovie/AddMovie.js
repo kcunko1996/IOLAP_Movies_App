@@ -35,7 +35,7 @@ import TextFieldGroup from '../../common/TextFieldGroup'
       BackgroundLink: this.state.BackgroundLink,
       Time: this.state.Time
     }
-    this.props.AddMovieAction(data)
+    this.props.AddMovieAction(data,this.props.history)
     
   }
 
@@ -49,16 +49,16 @@ import TextFieldGroup from '../../common/TextFieldGroup'
   }
 
   render() {
-    console.log(this.state.errors)
+    
     const {errors} = this.state
     return (
       <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">Deleting Movie</h5>
+            <h5 className="modal-title" id="exampleModalLabel">Add a Movie</h5>
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span >&times;</span>
+              
             </button>
           </div>
           <div className="modal-body">

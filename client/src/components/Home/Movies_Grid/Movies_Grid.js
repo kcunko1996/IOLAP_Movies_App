@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Movies_Grid.css'
 import MovieItem from './Movie_Item/MovieItem'
 import Loading from '../../common/Loading'
 
- class Movies_Grid extends React.Component  {
+ class MoviesGrid extends React.Component  {
 
   constructor(){
     super()
@@ -57,4 +57,4 @@ return (
 
 }
 
-export default Movies_Grid
+export default MoviesGrid
