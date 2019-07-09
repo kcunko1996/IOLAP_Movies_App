@@ -1,2 +1,2 @@
   # Dickey’s Barbecue Pit 
-  ## JavaScript Developer Task
+  ### JavaScript Developer Task
