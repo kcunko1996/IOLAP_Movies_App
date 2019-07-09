@@ -19,8 +19,8 @@ module.exports = (data) => {
       errors.name = 'Name must be between 3 and 50 characters'
     }
 
-    if(!Validator.isLength(data.genre, {min:3, max: 10})){
-      errors.genre = 'Genre must be between 3 and 10 characters'
+    if(!Validator.isLength(data.genre, {min:3, max: 30})){
+      errors.genre = 'Genre must be between 3 and 30 characters'
     }
 
     if(isNaN(data.rating) || data.rating === '' || !(data.rating % 1 === 0)){
