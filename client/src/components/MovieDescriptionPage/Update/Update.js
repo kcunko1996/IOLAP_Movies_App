@@ -4,22 +4,21 @@ import {connect} from 'react-redux'
 import {UpdateMovie} from '../../../actions/moviesActions'
 import TextFieldGroup from '../../common/TextFieldGroup'
  class Update extends Component {
-  constructor(){
-    super()
-    this.state = {
-      name: '',
-      genre: '',
-      rating: '',
-      Year: '',
-      Desc: '',
-      Language: '',
-      PictureLink: '',
-      BackgroundLink: '',
-      Time: '',
-      errors: {},
-      relode: false
+  
+    state = {
+      name: this.props.movies.movies[0].name,
+      genre: this.props.movies.movies[0].genre,
+      rating: this.props.movies.movies[0].rating,
+      Year: this.props.movies.movies[0].Year,
+      Desc: this.props.movies.movies[0].Desc,
+      Language: this.props.movies.movies[0].Language,
+      PictureLink: this.props.movies.movies[0].PictureLink,
+      BackgroundLink: this.props.movies.movies[0].BackgroundLink,
+      Time: this.props.movies.movies[0].Time,
+      errors: {}
+      
     }
-  }
+  
     onChange = (evt) => {
       this.setState({[evt.target.name]: evt.target.value})
   }
@@ -42,7 +41,7 @@ import TextFieldGroup from '../../common/TextFieldGroup'
   }
 
   componentWillReceiveProps(nextprops) {
-   
+  
     if(nextprops.errors){
       this.setState({errors: nextprops.errors })
      

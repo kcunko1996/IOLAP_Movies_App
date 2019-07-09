@@ -37,7 +37,7 @@ let ArrayGrid = movies.slice(0,limit).map(movie => {
 return (
 <section className="text-center my-5 ">
 
-  <h2 className="display-4 font-weight-bold my-5  text-white">DBT MOVIES</h2>
+  <h2 className="display-4 font-weight-bold my-5  text-white">DBP MOVIES</h2>
   <p className="lead grey-text w-responsive mx-auto mb-5  text-white">Only movies site that you will need.</p>
 
     <div className="row">

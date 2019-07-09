@@ -32,7 +32,7 @@ export default function CardDescription({id,name,genre,rating,Year,Desc,Language
             <p className="nameDesc text-white mr-auto"><span className="name  ">Genre:</span> {genre}</p>
             <p className="nameDesc text-white mr-auto"><span className="name ">Year:</span> {Year}</p>
             <p className="nameDesc text-white mr-auto"><span className="name ">Rating:</span> {rating}</p>
-            <p className="nameDesc text-white mr-auto"><span className="name ">Time:</span> {Time}</p>
+            <p className="nameDesc text-white mr-auto"><span className="name ">Time:</span> {Time} min</p>
             <p className="nameDesc text-white mr-auto"><span className="name ">Language:</span> {Language}</p>
             <p className="nameDesc text-white mr-auto"><span className="name ">Description:</span> {Desc}</p>
 
