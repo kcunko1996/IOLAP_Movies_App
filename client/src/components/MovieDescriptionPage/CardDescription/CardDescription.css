@@ -1,0 +1,52 @@
+
+
+.Top{
+  display: relative;
+  margin: 0;
+  top: 0;
+  text-align: center;
+}
+.MovieDescription{
+  position: absolute;
+  height: 40rem;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+ 
+  
+}
+
+.MovieDescriptionImage{
+  width: 27rem;
+  height: 35rem;
+  object-fit: cover;
+  margin-top: 1rem;
+  z-index: 1;
+  
+}
+
+hr{
+  border: 0;
+  border-top: 2px solid #eb315a;
+  border-bottom: 2px solid  #eb315a;
+  border-radius: 7px 7px 7px 7px;
+  width: 2rem; 
+}
+.name{
+  color: #eb315a;
+}
+.description{
+  width: 20rem;
+}
+.genre{
+  position: absolute;
+  left:55%;
+}
+.genreC{
+ position: relative;
+  left:-17%;
+}
+
+
