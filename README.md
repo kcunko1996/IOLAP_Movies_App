@@ -21,6 +21,8 @@ Libraries: React-Redux, React-Router-Dom, Redux-Thunk, Axios,Body-Parser, Valida
 - If user write inputs in AddMovie modal or Update modal appropriate error message will be shown beneath input fields
 - 404 massage won't be displayed for ID that are not in database (reason is unknown)
 
+
+
 ### Landing Page display
 ![Landing Page](https://github.com/kcunko1996/IOLAP_Movies_App/blob/master/git_App_Pictures/Movies_landing.PNG)
 
