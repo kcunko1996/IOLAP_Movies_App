@@ -16,7 +16,7 @@ module.exports = (data) => {
     data.Year = !isEmpty(data.Year) ? data.Year : ''
 
     if(!Validator.isLength(data.name, {min:3, max: 30})){
-      errors.name = 'Name must be between 3 and 50 characters'
+      errors.Name = 'Name must be between 3 and 50 characters'
     }
 
     if(!Validator.isLength(data.genre, {min:3, max: 30})){

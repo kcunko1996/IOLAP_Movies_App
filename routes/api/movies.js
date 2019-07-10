@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
   db.select('*')
   .from('movies')
   .then(data => res.json(data))
-  .catch(err => res.status(404).json(err))
+  .catch(() => res.status(404).json(`There is no such movie entrie  `))
 })
 
 // @route   GET request /api/v1/movies/:id
@@ -23,13 +23,13 @@ router.get('/:id', (req,res) => {
   .where('id','=', id)
   .then(data =>{
     if (data === undefined || data.length == 0) {
-      res.status(400).json( `There is no such movie entrie  `)
+      res.status(404).json( `There is no such movie entrie  `)
   } else {
   res.json(data)
   }
     
   })
-  .catch((err) => res.status(404).json(err))
+  .catch(() => res.status(404).json({msg: `There is no such movie entrie  `}))
 })
 
 // @route   POST request /api/v1/movies

@@ -72,7 +72,7 @@ import TextFieldGroup from '../../common/TextFieldGroup'
         value= {this.state.name}
         type='text'
         onChange={e => this.onChange(e)}
-        error={errors.name}
+        error={errors.Name}
         />
 
          <TextFieldGroup

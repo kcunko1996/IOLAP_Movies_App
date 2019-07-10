@@ -8,6 +8,7 @@ import BodyBackgroundColor from 'react-body-backgroundcolor'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 import {Provider} from 'react-redux'
 import LandingPage from './components/LandingPage/LandingPage'
+import AddMovie from './components/Home/AddMovie/AddMovie'
 import store from './store'
 function App() {
  
@@ -18,6 +19,7 @@ function App() {
      <Router>
 
     <Navigation />
+    <AddMovie/>
        <Switch>
     <Route exact path='/' component= { LandingPage } />
     <Route exact path='/api/v1/movies' component= { Home } />
