@@ -6,6 +6,7 @@ import NoMovieError from './NoMovieError/NoMovieError'
 import {connect} from 'react-redux'
 import {GetAllMovies} from '../../actions/moviesActions'
 import AddMovie from '../Home/AddMovie/AddMovie'
+import Loading from './../common/Loading'
  class Home extends Component {
 
  componentDidMount(){
@@ -24,9 +25,11 @@ const {movies}=this.props.movies
 
         else{
           Dashboard = (<div> <Header movies={movies}/><MoviesGrid movies={movies} />
-                            <AddMovie/> a
+                            <AddMovie/> 
                       </div> )
         }
+      } else{
+        return(<Loading/>)
       }
   
     return (<div> {Dashboard}</div>)

@@ -5,9 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 import HeaderSLide from '../Header/Header_Slide/Header_Slide'
 import Loading from '../../common/Loading'
 
-export default function Header({movies}) {
-  
-const isArray = Array.isArray(movies);
+class Header extends React.Component  {
+ 
+  render(){
+  const movies = this.props.movies
+  const isArray = Array.isArray(movies);
 
     if(!isArray){
       return (<Loading/> )
@@ -40,5 +42,6 @@ const isArray = Array.isArray(movies);
         </Carousel>
       )
     }
-  
+  }
 }
+export default Header;
