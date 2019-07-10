@@ -23,7 +23,7 @@ Libraries: React-Redux, React-Router-Dom, Redux-Thunk, Axios,Body-Parser, Valida
 
 ## Errors that are not solved 
 -  404 massage won't be displayed for ID that are not in database (reason is unknown).
-- Loading animation is showing for Movie description Page but not for Home Page (reason is unknown).
+
 
 ### Landing Page display
 ![Landing Page](https://github.com/kcunko1996/IOLAP_Movies_App/blob/master/git_App_Pictures/Movies_landing.PNG)
