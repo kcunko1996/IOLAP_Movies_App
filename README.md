@@ -7,9 +7,11 @@ DELETE.
 
 ### Starting a Project
 When file is downloaded, start a project by writing in console npm start or if project isnt started then run commands in following order: 
-1. cd movies_app
-2. npm run server
-3. cd client
+1. cd IOLAP_Movies_App
+2. npm install
+3. npm run server
+4. cd client
+5. npm install
 4. npm start
 
 ### Project is made with following technology's 
