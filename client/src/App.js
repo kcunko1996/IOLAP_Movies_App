@@ -24,6 +24,7 @@ function App() {
     <Route exact path='/' component= { LandingPage } />
     <Route exact path='/api/v1/movies' component= { Home } />
     <Route exact path='/api/v1/movies/:id' component= {MoviePage} />
+    <Route exact path='/not-found' component= {PageNotFound} />
     <Route component={PageNotFound} />
     </Switch>
     

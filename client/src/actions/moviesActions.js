@@ -20,7 +20,7 @@ export const GetAllMovies = () => dispatch => {
       )
   }
 
-export const getOneMovie = (data) => dispatch => {
+export const getOneMovie = (data,history) => dispatch => {
         
            axios
           .get(`/api/v1/movies/${data}`)
@@ -30,11 +30,10 @@ export const getOneMovie = (data) => dispatch => {
               payload: res.data
             })
                )
-              .catch(err =>
-                dispatch({
-                  type: GET_ERROR,
-                  payload: err
-                })
+              .catch(err =>  { 
+                if(err.response.status == 404){
+                 history.push('/not-found')
+               }}
       )
  }
 

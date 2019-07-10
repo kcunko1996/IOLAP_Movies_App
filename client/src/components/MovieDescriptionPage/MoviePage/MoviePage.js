@@ -7,19 +7,19 @@ import {getOneMovie} from '../../../actions/moviesActions'
 import {connect} from 'react-redux'
 import DeleteModal from '../Delete/DeleteModal'
 import Update from '../Update/Update'
-import AddMovie from '../../Home/AddMovie/AddMovie'
+import {withRouter} from 'react-router-dom'
  class MoviePage extends Component {
  
   
   componentDidMount(){
-    this.props.getOneMovie(this.props.match.params.id)
+    this.props.getOneMovie(this.props.match.params.id,this.props.history)
   }
  
   render() {
 
     const movies = this.props.movies
     let dashboard
-
+    console.log(movies)
     if(Array.isArray(movies)){
 
       if(movies.length === 1) {
@@ -31,7 +31,7 @@ import AddMovie from '../../Home/AddMovie/AddMovie'
                        <CardDescription id={id} name={name} genre={genre} rating={rating} Year={Year} Desc={Desc} Language={Language} Time={Time} PictureLink={PictureLink}/>
                        <DeleteModal id={id}/>
                        <Update id={id} name={name} genre={genre} rating={rating} Year={Year} Desc={Desc} Language={Language} PictureLink={PictureLink} BackgroundLink={BackgroundLink}/>
-                       <AddMovie/>
+                       
                     </div> )
     } else {
 
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 }) 
 
-export default connect(mapStateToProps, {getOneMovie})(MoviePage)
+export default connect(mapStateToProps, {getOneMovie})(withRouter( MoviePage))
