@@ -16,10 +16,10 @@ When file is downloaded, start a project by writing in console npm start or if p
 Libraries: React-Redux, React-Router-Dom, Redux-Thunk, Axios,Body-Parser, Validator
 
 ## Error Handling
-If there is no movies in database user will be shown appropriate message.
-If link is invalid 404 message will be displayed.
-If user write inputs in AddMovie modal or Update modal appropriate error message will be shown beneath input fields
-404 massage won't be displayed for ID that are not in database (reason is unknown)
+- If there is no movies in database user will be shown appropriate message.
+- If link is invalid 404 message will be displayed.
+- If user write inputs in AddMovie modal or Update modal appropriate error message will be shown beneath input fields
+- 404 massage won't be displayed for ID that are not in database (reason is unknown)
 
 ### Landing Page display
 ![Landing Page](https://github.com/kcunko1996/IOLAP_Movies_App/blob/master/git_App_Pictures/Movies_landing.PNG)
